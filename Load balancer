@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Update system packages
+yum update -y
+
+# Install Apache HTTP server
+yum install httpd -y
+
+# Start the Apache service
+systemctl start httpd
+
+# Enable Apache to start on boot
+systemctl enable httpd
+
+# Navigate to the web root directory
+cd /var/www/html
+
+# Create the index.html file with your content
+echo "<p>fatima.in</p><h1>Hello World 1</h1>" > index.html
